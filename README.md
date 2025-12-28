@@ -8,17 +8,22 @@ STEP 1: Create an AWS Account
 ________________________________________
 
 STEP 2: Create an IAM User (Security Best Practice)
+
 2.1 Open IAM
   •	Services → IAM
   •	Click Users → Add user
+
 2.2 User Details
   •	User name: USER1
   •	Access type: ✅ Programmatic access
+
 2.3 Permissions
-  •	Attach policies directly:
+•	Attach policies directly:
     o	AmazonRekognitionFullAccess
     o	AmazonS3ReadOnlyAccess
+
 ->>>Ethier attch policy 
+
 2.4 Save Credentials
 ⚠️ Download Access Key & Secret Key (important)
 
@@ -34,10 +39,12 @@ STEP 3: Create an S3 Bucket
 ________________________________________
 
 STEP 4: Install Python & AWS CLI
+
 4.1 Install Python
 Download from https://www.python.org
 Check:
 python --version
+
 4.2 Install AWS CLI
 pip install awscli
 Verify:
@@ -58,6 +65,7 @@ pip install boto3
 
 ________________________________________
 STEP 7: Write Python Code (Image Label Detection)
+
 7.1 Create File
 image_labels.py
 
@@ -75,6 +83,8 @@ STEP 9: Connect S3 Trigger to Lambda
 •	S3 → Bucket → Properties
 •	Event notification → ObjectCreated
 •	Destination → Lambda function
+
+________________________________________
 STEP 10: Create Web UI (Streamlit)
 pip install streamlit
 Create app.py
